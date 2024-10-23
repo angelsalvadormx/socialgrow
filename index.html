@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Sitio Web</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de enlazar el CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    </style>
+    <!-- <link rel="stylesheet" href="./logo/style-logo.css"> -->
 </head>
+
 <body>
     <header>
-        <div class="logo">SOCIAL BOOST</div>
+        <div class="logo" style="background-image: url(./logo/Logo-gradient-red-png-no-text.svg);"></div>
         <button id="menuToggle" class="btn">☰</button>
-        <nav >
+        <nav>
             <ul id="navMenu">
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#services">Servicios</a></li>
@@ -20,11 +25,14 @@
             </ul>
         </nav>
     </header>
-    
+
     <div class="hero">
-      <h1>Mejora tu presencia en redes sociales</h1>
-      <p>Ofrecemos followers, likes y comentarios para Facebook, Instagram, y más.</p>
-      <a href="#services" class="btn">Explorar servicios</a>
+        <!-- <img src="./logo/Base-logo-transparent.png" alt="Logo" class="logo-main" /> -->
+        <h1 class="logo-text">SOCIAL BOOST</h1>
+        <!-- <section class="logo-main" style="background-image: url(./logo/Logo-gradient-red.svg);"></section> -->
+        <h1>Mejora tu presencia en redes sociales</h1>
+        <p>Ofrecemos followers, likes y comentarios para Facebook, Instagram, y más.</p>
+        <a href="#services" class="btn">Explorar servicios</a>
     </div>
 
     <section class="section" id="services">
@@ -79,4 +87,5 @@
 
     <script src="script.js"></script> <!-- Asegúrate de enlazar el JavaScript -->
 </body>
+
 </html>

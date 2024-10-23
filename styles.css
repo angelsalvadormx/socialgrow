@@ -1,12 +1,26 @@
 :root {
+  --color-bg-primary: #fff;
   --color-primary: #60D4EA;
   --color-secondary: #9AE5F3;
   --color-background: #020202;
   --color-text: #9AE5F3;
   --color-header-footer: #19191A;
   --color-border: #9AE5F3;
-  --color-red: #FF0000; /* Color rojo agregado */
+  --color-red: #FF0000;
+  /* Color rojo agregado */
 }
+
+@font-face {
+  font-family: 'Phenomena-Bold';
+  src: url('./fonts/phenomena/Phenomena-Bold.otf') format('opentype');
+}
+
+.logo-text{
+  font-family: Phenomena-Bold;
+  font-size: 30px;
+  color: #fff !important;
+}
+
 
 html,
 body {
@@ -27,21 +41,35 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0 20px;
   background-color: #252526;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 3px solid var(--color-red); /* Bordes inferiores en rojo */
+  border-bottom: 3px solid var(--color-red);
+  /* Bordes inferiores en rojo */
 }
 
-#menuToggle{
+#menuToggle {
   display: none;
 }
 
+.logo-main {
+  width: 100px;
+  height: 100px;
+}
+
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  height: 68px;
+  width: 60px;
+}
+
+.logo-main,
+.logo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
 
 .menu-toggle {
@@ -54,7 +82,8 @@ header {
 }
 
 nav {
-  position: relative; /* Para el posicionamiento del menú */
+  position: relative;
+  /* Para el posicionamiento del menú */
 }
 
 nav ul {
@@ -72,7 +101,8 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--color-red); /* Cambiar color al pasar el mouse */
+  color: var(--color-red);
+  /* Cambiar color al pasar el mouse */
 }
 
 .hero {
@@ -89,7 +119,8 @@ nav a:hover {
 }
 
 .hero h1:hover {
-  color: var(--color-red); /* Cambiar a rojo al pasar el mouse */
+  color: var(--color-red);
+  /* Cambiar a rojo al pasar el mouse */
 }
 
 .hero p {
@@ -192,7 +223,8 @@ nav a:hover {
 }
 
 .btn:hover {
-  background-color: var(--color-red); /* Cambiar a color secundario en hover */
+  background-color: var(--color-red);
+  /* Cambiar a color secundario en hover */
   color: #fff;
 }
 
@@ -207,7 +239,8 @@ footer {
   text-align: center;
   padding: 1rem;
   background-color: #252526;
-  border-top: 3px solid var(--color-red); /* Bordes superiores en rojo */
+  border-top: 3px solid var(--color-red);
+  /* Bordes superiores en rojo */
 }
 
 /* Media Queries */
@@ -215,9 +248,10 @@ footer {
   #menuToggle {
     display: initial;
   }
-  
+
   nav {
-    position: absolute; /* Para el posicionamiento del menú */
+    position: absolute;
+    /* Para el posicionamiento del menú */
   }
 
   nav ul {
@@ -233,24 +267,33 @@ footer {
   }
 
   nav a:hover {
-    color: var(--color-red); /* Cambiar a rojo al pasar el mouse */
+    color: var(--color-red);
+    /* Cambiar a rojo al pasar el mouse */
   }
 
   /* Menú */
   nav ul {
     position: fixed;
-    right: -337px; /* Oculta el menú inicialmente */
-    top: 0; /* Ajusta la posición del menú */
-    width: 250px; /* Ancho del menú */
-    height: 100%; /* Altura del menú */
+    right: -337px;
+    /* Oculta el menú inicialmente */
+    top: 0;
+    /* Ajusta la posición del menú */
+    width: 250px;
+    /* Ancho del menú */
+    height: 100%;
+    /* Altura del menú */
     background-color: var(--color-header-footer);
-    transition: right 0.3s ease; /* Animación suave para el menú */
-    padding: 2rem; /* Espaciado interno */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra del menú */
+    transition: right 0.3s ease;
+    /* Animación suave para el menú */
+    padding: 2rem;
+    /* Espaciado interno */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    /* Sombra del menú */
   }
 
   nav ul.show {
-    right: 0; /* Muestra el menú al agregar la clase 'show' */
+    right: 0;
+    /* Muestra el menú al agregar la clase 'show' */
   }
 
   nav>ul {
@@ -264,6 +307,7 @@ footer {
   }
 
   .menu-toggle {
-    display: block; /* Asegúrate de que el botón siempre sea visible */
+    display: block;
+    /* Asegúrate de que el botón siempre sea visible */
   }
 }
