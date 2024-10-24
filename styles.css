@@ -6,7 +6,10 @@
   --color-text: #9AE5F3;
   --color-header-footer: #19191A;
   --color-border: #9AE5F3;
-  --color-red: #FF0000;
+  --color-red: #BC0000;
+  --color-red-secondary: #f9820e;
+  --color-blue: #02dfe6;
+  --color-golden: #f9d82b;
   /* Color rojo agregado */
 }
 
@@ -15,10 +18,10 @@
   src: url('./fonts/phenomena/Phenomena-Bold.otf') format('opentype');
 }
 
-.logo-text{
+.logo-text {
   font-family: Phenomena-Bold;
   font-size: 30px;
-  color: #fff !important;
+  color: #DFE3E3 !important;
 }
 
 
@@ -37,7 +40,24 @@ body {
   flex-direction: column;
 }
 
-header {
+.red-color-secondary {
+  color: var(--color-red-secondary);
+}
+
+.red-color-primary {
+  color: var(--color-red);
+}
+
+.golden-color{
+  color: var(--color-golden);
+}
+
+.blue-color {
+  color: var(--color-blue);
+
+}
+
+#header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,52 +126,65 @@ nav a:hover {
 }
 
 .hero {
-  text-align: center;
-  padding: 100px 20px;
   background-color: var(--color-background);
-  min-height: 400px;
+  min-height: 722px;
 }
 
-.hero h1 {
-  font-size: 2.5em;
+.hero main h1 {
+  font-size: 45px;
   color: var(--color-primary);
   transition: color 0.3s ease;
 }
 
-.hero h1:hover {
+.hero main h1:hover {
   color: var(--color-red);
   /* Cambiar a rojo al pasar el mouse */
 }
 
-.hero p {
-  font-size: 1.2em;
+.hero main p {
+  font-size: 15px;
   color: var(--color-text);
   transition: color 0.3s ease;
 }
 
-.hero p:hover {
+.hero main p:hover {
   color: var(--color-primary);
 }
 
-.section {
-  padding: 2rem;
-  border-bottom: 1px solid #333;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#contact {
+  margin-top: 29px;
 }
+
+#services {
+  min-height: 600px;
+  padding: 40px 0;
+}
+
+#services h2 {
+  margin-bottom: 25px;
+}
+
+.btn-service{
+  font-size: 12px;
+  display: inline-block;
+  color: #461111;
+  background-color: #60D4EA;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: 500;
+}
+
+
 
 .section h1,
 .section h2 {
   color: #60D4EA;
 }
 
-.servicios-container {
-  display: flex;
-  flex-wrap: wrap;
+#sec-packages,
+#sec-services {
   gap: 1.5rem;
-  justify-content: center;
 }
 
 .servicio {
@@ -160,6 +193,7 @@ nav a:hover {
   padding: 1.5rem;
   width: 250px;
   transition: transform 0.3s, box-shadow 0.3s;
+  height: 150px;
 }
 
 .servicio:hover {
@@ -167,19 +201,23 @@ nav a:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-.servicio h3 {
+.servicio header h3 {
   color: #60D4EA;
+  font-size: 20px !important;
+  line-height: 0;
+}
+.servicio header span{
+  font-size: 12px
 }
 
-.servicio p {
-  color: #ffffff;
+.servicio main p{
+  font-size: 12px;
+  color: #ddd;
 }
 
-.paquetes-container {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+#testimonials,
+#packages{
+min-height: 500px;
 }
 
 .paquete {
@@ -223,7 +261,7 @@ nav a:hover {
 }
 
 .btn:hover {
-  background-color: var(--color-red);
+  /*! background-color: var(--color-red); */
   /* Cambiar a color secundario en hover */
   color: #fff;
 }
@@ -235,7 +273,7 @@ blockquote {
   margin: 1rem 0;
 }
 
-footer {
+#footer {
   text-align: center;
   padding: 1rem;
   background-color: #252526;

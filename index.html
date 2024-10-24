@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Sitio Web</title>
+    <title>Social boost</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-    </style>
-    <!-- <link rel="stylesheet" href="./logo/style-logo.css"> -->
+    <link rel="stylesheet" href="https://angelsalvadormx.github.io/cdn-as/natasha-framework/v2/nat.css">
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="logo" style="background-image: url(./logo/Logo-gradient-red-png-no-text.svg);"></div>
         <button id="menuToggle" class="btn">☰</button>
         <nav>
@@ -26,52 +24,34 @@
         </nav>
     </header>
 
-    <div class="hero">
-        <!-- <img src="./logo/Base-logo-transparent.png" alt="Logo" class="logo-main" /> -->
-        <h1 class="logo-text">SOCIAL BOOST</h1>
-        <!-- <section class="logo-main" style="background-image: url(./logo/Logo-gradient-red.svg);"></section> -->
-        <h1>Mejora tu presencia en redes sociales</h1>
-        <p>Ofrecemos followers, likes y comentarios para Facebook, Instagram, y más.</p>
-        <a href="#services" class="btn">Explorar servicios</a>
-    </div>
+    <section class="hero d-flex justify-content-center align-items-center" id="home">
+        <div class="text-center">
+            <h1 class="logo-text"><span class="red-color-secondary">SOCI</span>AL BO<span class="blue-color">OST</span>
+            </h1>
+            <main class="mt-5">
+                <!-- <section class="logo-main" style="background-image: url(./logo/Logo-gradient-red.svg);"></section> -->
+                <h1>Mejora tu presencia en redes sociales</h1>
+                <p>Ofrecemos followers, likes y comentarios para Tiktok, Instagram, y más.</p>
 
-    <section class="section" id="services">
-        <h2>Nuestros Servicios</h2>
-        <div class="servicios-container">
-            <div class="servicio">
-                <h3>Servicio 1</h3>
-                <p>Descripción del servicio 1.</p>
-            </div>
-            <div class="servicio">
-                <h3>Servicio 2</h3>
-                <p>Descripción del servicio 2.</p>
-            </div>
-            <div class="servicio">
-                <h3>Servicio 3</h3>
-                <p>Descripción del servicio 3.</p>
-            </div>
+            </main>
+            <a id="contact" href="#services" class="btn mt-5 d-block w-25 center-margin">Explorar servicios</a>
         </div>
     </section>
 
-    <section class="section" id="packages">
+    <section class="section d-flex align-items-center flex-direction-column" id="services">
+        <h2>Nuestros Serv<span class="red-color-secondary">icios </span></h2>
+        <div id="sec-services" class="servicios-container d-flex mt-5 flex-wrap justify-content-center">
+            
+        </div>
+    </section>
+
+    <section class="section d-flex align-items-center flex-direction-column" id="packages">
         <h2>Paquetes</h2>
-        <div class="paquetes-container">
-            <div class="paquete">
-                <h3>Paquete 1</h3>
-                <p>Descripción del paquete 1.</p>
-                <span class="precio">$100</span>
-                <button class="btn">Comprar</button>
-            </div>
-            <div class="paquete">
-                <h3>Paquete 2</h3>
-                <p>Descripción del paquete 2.</p>
-                <span class="precio">$200</span>
-                <button class="btn">Comprar</button>
-            </div>
+        <div id="sec-packages" class="d-flex mt-5 flex-wrap justify-content-center">
         </div>
     </section>
 
-    <section class="section" id="testimonials">
+    <section class="section d-flex align-items-center flex-direction-column" id="testimonials">
         <h2>Testimonios</h2>
         <blockquote>
             "Este servicio es increíble. Lo recomiendo a todos!"
@@ -81,11 +61,19 @@
         </blockquote>
     </section>
 
-    <footer>
+    <footer id="footer">
         <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script> <!-- Asegúrate de enlazar el JavaScript -->
+    <script src="./assets/js/services.js"></script>
+    <script src="./assets/js/packages.js"></script>
+    <script>
+        window.addEventListener('load',function(){
+            loadServices();
+            loadPackages();
+        });
+    </script>
 </body>
 
 </html>
