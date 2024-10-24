@@ -36,8 +36,6 @@ body {
   font-family: Arial, sans-serif;
   background-color: #1e1e1e;
   color: #ffffff;
-  display: flex;
-  flex-direction: column;
 }
 
 .red-color-secondary {
@@ -155,9 +153,11 @@ nav a:hover {
   margin-top: 29px;
 }
 
+#testimonials,
+#packages,
 #services {
-  min-height: 600px;
-  padding: 40px 0;
+  padding: 50px 0;
+  margin-bottom: 60px;
 }
 
 #services h2 {
@@ -215,10 +215,7 @@ nav a:hover {
   color: #ddd;
 }
 
-#testimonials,
-#packages{
-min-height: 500px;
-}
+
 
 .paquete {
   background-color: #3b3b3b;

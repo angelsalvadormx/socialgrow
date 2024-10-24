@@ -21,7 +21,7 @@ const loadPackages = () => {
 
   dataPackages.forEach(item => {
     const { name_package, cost, description, buy_url, folio } = item;
-    secPackages.insertAdjacentHTML('beforeend', `<div class="paquete">
+    secPackages.insertAdjacentHTML('beforeend', `<div class="paquete justify-content-between d-flex flex-direction-column">
                 <h3>${name_package}</h3>
                 <p>${description}</p>
                 <span class="precio">$${cost}</span>
