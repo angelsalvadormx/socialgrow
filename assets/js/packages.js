@@ -1,23 +1,15 @@
-const dataPackages = [
-  {
-    "folio": "51354AS",
-    "name_package": "Paquete 1",
-    "cost": 124.84,
-    "description": "1000 seguidores de cuentas de perú, 500 Likes de cuentas de instagram mexicanas",
-    "buy_url": ""
-  },
-  {
-    "folio": "256713G3E",
-    "name_package": "Paquete 2",
-    "cost": 277.27,
-    "description": "1000 seguidores de cuentas mexicanas,1000 seguidores de cuentas de perú, 500 Likes de cuentas de instagram mexicanas",
-    "buy_url": ""
-  }
-]
 
 
-const loadPackages = () => {
+
+const loadPackages = async() => {
   const secPackages = document.getElementById('sec-packages');
+  
+  const response = await fetch('https://socialgrow.com.mx/api/packages');
+  if (!response.ok) {
+    throw new Error(`Response status: ${response.status}`);
+  }
+  const json = await response.json();
+  const { data: dataPackages } = json;
 
   dataPackages.forEach(item => {
     const { name_package, cost, description, buy_url, folio } = item;

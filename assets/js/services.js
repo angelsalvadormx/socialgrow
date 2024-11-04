@@ -1,29 +1,13 @@
-const dataServices = [
-  {
-    "folio": "51354AS",
-    "name_service": "Tiktok",
-    "cost": 124.84,
-    "description": "1000 seguidores de cuentas de perú",
-    "buy_url": ""
-  },
-  {
-    "folio": "256713G3E",
-    "name_service": "Instragram",
-    "cost": 277.27,
-    "description": "500 Likes de cuentas de instagram mexicanas",
-    "buy_url": ""
-  },
-  {
-    "folio": "256713G3E",
-    "name_service": "Tiktok",
-    "cost": 128.81,
-    "description": "1000 seguidores de cuentas mexicanas",
-    "buy_url": ""
-  }
-];
 
-const loadServices = () => {
+const loadServices = async () => {
   const secServices = document.getElementById('sec-services');
+  
+  const response = await fetch('https://socialgrow.com.mx/api/services');
+  if (!response.ok) {
+    throw new Error(`Response status: ${response.status}`);
+  }
+  const json = await response.json();
+  const { data: dataServices } = json;
 
   dataServices.forEach(item => {
     const { name_service, cost, description, buy_url, folio } = item;
