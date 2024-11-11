@@ -5,23 +5,30 @@ $data = [
   [
     "folio" => "51354AS",
     "name_service" => "Tiktok",
-    "cost" => 124.84,
-    "description" => "1000 seguidores de cuentas de perú",
-    "buy_url" => ""
+    "cost" => 7.15,
+    "description" => "1000 seguidores de cuentas mexicanas",
+    "buy_url" => "https://wa.me/$tel?text=Hola,%20estoy%20interesado%20en%20servicio%20#51354AS"
   ],
   [
     "folio" => "256713G3E",
     "name_service" => "Instragram",
-    "cost" => 277.27,
-    "description" => "500 Likes de cuentas de instagram mexicanas",
-    "buy_url" => ""
+    "cost" => 10.68,
+    "description" => "1,000 followers de cuentas de instagram Latinoamérica",
+    "buy_url" => "https://wa.me/$tel?text=Hola,%20estoy%20interesado%20en%20servicio%20#256713G3E"
   ],
   [
-    "folio" => "256713G3E",
-    "name_service" => "Tiktok",
-    "cost" => 128.81,
-    "description" => "1000 seguidores de cuentas mexicanas",
-    "buy_url" => ""
+    "folio" => "625713GFE",
+    "name_service" => "Instragram",
+    "cost" => 59.07,
+    "description" => "1,000 followers de cuentas tipo vip solo de hombres (USA y/o Europa)",
+    "buy_url" => "https://wa.me/$tel?text=Hola,%20estoy%20interesado%20en%20servicio%20#625713GFE"
+  ],
+  [
+    "folio" => "JF5713GFE",
+    "name_service" => "Instragram",
+    "cost" => 59.07,
+    "description" => "1,000 followers de cuentas tipo vip solo de mujeres (USA y/o Europa)",
+    "buy_url" => "https://wa.me/$tel?text=Hola,%20estoy%20interesado%20en%20servicio%20#JF5713GFE"
   ]
 ];
 
