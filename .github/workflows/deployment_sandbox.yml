@@ -1,0 +1,21 @@
+on: 
+  push:
+    branches:
+      - QA
+name: Publish QA SocialGrow
+jobs:
+  web-deploy:
+    name: Deploy To QA SocialGrow
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        protocol: ftp
+        server: ${{ secrets.FTP_QA_SERVER }} 
+        username: ${{ secrets.FTP_QA_USERNAME }}
+        password: ${{ secrets.FTP_QA_PASSWORD }}
+        server-dir: ${{ secrets.FTP_QA_SERVER_DIR }}
