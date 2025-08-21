@@ -19,8 +19,8 @@ jobs:
     - name: 📦 Install dependencies
       run: |
         npm install
-        # cp env-QA .env
-        # cat .env
+        cp .env-QA .env
+        cat .env
 
     - name: 🛠️ Build project
       run: |
