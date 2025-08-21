@@ -31,7 +31,7 @@ jobs:
         mkdir deploy_folder
         mv api ./deploy_folder
         mv build/* ./deploy_folder
-        ls ./deploy_folder
+        ls ./deploy_folder/
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
