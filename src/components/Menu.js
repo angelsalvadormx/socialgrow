@@ -12,7 +12,7 @@ const Menu = () => {
   return (
     <div className="menu">
       <div className="logo-img">
-        <img src={Logo} width={85}></img>
+        <img src={Logo} width={85} alt="logo-img"></img>
       </div>
       <div className={`nav ${menuOpen ? "open" : ""}`}>
         <ul>

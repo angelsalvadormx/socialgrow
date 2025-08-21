@@ -7,7 +7,7 @@ import ShopIcon from "../Img/shop-icon.svg";
 import icTiktok from "../Img/ic_tiktok.svg";
 import icInta from "../Img/ic_instagram.svg";
 import getExchangeRate from "../utils/dolar";
-import { Check, ShoppingBag } from "lucide-react";
+import { Check } from "lucide-react";
 import TypingText from "./TypingTextEffect/TypingText";
 import Elipse from "../Img/Ellipse 4.svg";
 import Elipse5 from "../Img/Ellipse 5.svg";
@@ -67,20 +67,15 @@ const Home = () => {
     window.open(linkRedirect, "_blank");
   };
 
-  console.log(services);
-  console.log(plans);
-  console.log(testimonies);
-
   return (
     <div className="container">
       <div className="ellipse" />
       <Menu />
-
       <div className="ellipse4">
-        <img src={Elipse}></img>
+        <img src={Elipse} alt="ellipe1"></img>
       </div>
       <div className="ellipse5">
-        <img src={Elipse5}></img>
+        <img src={Elipse5} alt="ellipe2"></img>
       </div>
 
       <div className="body-home">
@@ -111,7 +106,7 @@ const Home = () => {
         <section id="aboutus">
         <div className="section-aboutus">          
           <div className="ellipse-arrow">
-            <img className="img-arrow" src={arrow}></img>
+            <img className="img-arrow" src={arrow} alt="arrow"></img>
           </div>
           <div className="description splitText">
             <div className="text-descrip">
@@ -120,7 +115,7 @@ const Home = () => {
               <p>followers</p>
             </div>
             <div className="img-socialMedia">
-              <img src={socialMedia}></img>
+              <img src={socialMedia} alt="socialMedia"></img>
             </div>
           </div>
         </div>
@@ -138,7 +133,8 @@ const Home = () => {
                   <div className="icon">
                     <img
                       class=""
-                      src={service.name_service == "Tiktok" ? icTiktok : icInta}
+                      src={service.name_service === "Tiktok" ? icTiktok : icInta}
+                      alt="service-icon"
                     ></img>
                   </div>
                 </div>
@@ -160,7 +156,7 @@ const Home = () => {
                   </div>
                   <div>
                     <button onClick={() => handleClick(service?.buy_url)}>
-                      <img src={ShopIcon}></img>Comprar
+                      <img src={ShopIcon} alt="comprar"></img>Comprar
                     </button>
                   </div>
                 </div>
@@ -170,10 +166,10 @@ const Home = () => {
         </div>
         </section>
         <div className="ellipse18">
-          <img src={Elipse18}></img>
+          <img src={Elipse18} alt="ellipse18"></img>
         </div>
         <div className="ellipse19">
-          <img src={Elipse19}></img>
+          <img src={Elipse19} alt="ellipse19"></img>
         </div>
         <section id="plans">
         <div className="section-plans">
@@ -186,7 +182,7 @@ const Home = () => {
               <div className="card-container">
                 <div className="card-wrapper">
                   <div
-                    className={plan.offer == true ? "active-card" : "card-plan"}
+                    className={plan.offer === true ? "active-card" : "card-plan"}
                   >
                     <div className="card-content">
                       <h1 className="card-title">{plan?.name_package}</h1>
@@ -212,7 +208,7 @@ const Home = () => {
                           className="card-button"
                           onClick={() => handleClick(plan?.buy_url)}
                         >
-                          <img src={ShopIcon} />
+                          <img src={ShopIcon} alt="compra"/>
                           <span className="card-button-text">Comprar</span>
                         </button>
                       </div>
@@ -227,7 +223,7 @@ const Home = () => {
         </div>
         </section>
         <div>
-          <img src={Elipse17}></img>
+          <img src={Elipse17} alt="ellipe17"></img>
         </div>
         <section id="testimonies">
         <div className="section-testimonies">
@@ -249,7 +245,6 @@ const Home = () => {
             ))}
           </div>
         </div>
-
         </section>
         <footer>
           <p>© 2024 Social Grow. Todos los derechos reservados.</p>
