@@ -60,12 +60,15 @@ const Home = () => {
 
   getExchangeRate("USD", "MXN").then((precio) => {
     setPriceCovertion(precio);
-    console.log(precio); // 18.73
   });
 
   const handleClick = (linkRedirect) => {
     window.open(linkRedirect, "_blank");
   };
+
+  const redirectService = () => {
+    window.location.href='#services'
+  }
 
   return (
     <div className="container">
@@ -100,70 +103,78 @@ const Home = () => {
               Ofrecemos followers, likes y comentarios para Tiktok, Instagram, y
               más.
             </p>
-            <button className="btn-services">Explorar servicios</button>
+            <a href="#services">
+              <button
+                className="btn-services"
+              >
+                Explorar servicios
+              </button>
+            </a>
           </div>
         </div>
         <section id="aboutus">
-        <div className="section-aboutus">          
-          <div className="ellipse-arrow">
-            <img className="img-arrow" src={arrow} alt="arrow"></img>
-          </div>
-          <div className="description splitText">
-            <div className="text-descrip">
-              <p>100%</p>
-              <p>Real</p>
-              <p>followers</p>
+          <div className="section-aboutus">
+            <div className="ellipse-arrow" onClick={()=>redirectService()}>
+              <img className="img-arrow" src={arrow} alt="arrow"></img>
             </div>
-            <div className="img-socialMedia">
-              <img src={socialMedia} alt="socialMedia"></img>
+            <div className="description splitText">
+              <div className="text-descrip">
+                <p>100%</p>
+                <p>Real</p>
+                <p>followers</p>
+              </div>
+              <div className="img-socialMedia">
+                <img src={socialMedia} alt="socialMedia"></img>
+              </div>
             </div>
           </div>
-        </div>
         </section>
         <section id="services">
-        <div className="section-services ">
-          <div className="title-services animatedServices">
-            <p>Nuestros Servicios</p>
-          </div>
-          <div className="wrapper-card">
-            {/* SERVICOS ------ */}
-            {services.map((service) => (
-              <div className="card">
-                <div>
-                  <div className="icon">
-                    <img
-                      class=""
-                      src={service.name_service === "Tiktok" ? icTiktok : icInta}
-                      alt="service-icon"
-                    ></img>
-                  </div>
-                </div>
-                <div className="name-service">
-                  <p>{service.name_service}</p>
-                </div>
-                <div className="description-service">
-                  <p>{service.description}</p>
-                </div>
-                <div className="footer-card">
-                  <div className="price">
-                    <p>
-                      {new Intl.NumberFormat("es-MX", {
-                        style: "currency",
-                        currency: "MXN",
-                        maximumFractionDigits: 2,
-                      }).format(priceCovertion * service.cost)}
-                    </p>
-                  </div>
+          <div className="section-services ">
+            <div className="title-services animatedServices">
+              <p>Nuestros Servicios</p>
+            </div>
+            <div className="wrapper-card">
+              {/* SERVICOS ------ */}
+              {services.map((service) => (
+                <div className="card">
                   <div>
-                    <button onClick={() => handleClick(service?.buy_url)}>
-                      <img src={ShopIcon} alt="comprar"></img>Comprar
-                    </button>
+                    <div className="icon">
+                      <img
+                        class=""
+                        src={
+                          service.name_service === "Tiktok" ? icTiktok : icInta
+                        }
+                        alt="service-icon"
+                      ></img>
+                    </div>
+                  </div>
+                  <div className="name-service">
+                    <p>{service.name_service}</p>
+                  </div>
+                  <div className="description-service">
+                    <p>{service.description}</p>
+                  </div>
+                  <div className="footer-card">
+                    <div className="price">
+                      <p>
+                        {new Intl.NumberFormat("es-MX", {
+                          style: "currency",
+                          currency: "MXN",
+                          maximumFractionDigits: 2,
+                        }).format(priceCovertion * service.cost)}
+                      </p>
+                    </div>
+                    <div>
+                      <button onClick={() => handleClick(service?.buy_url)}>
+                        <img src={ShopIcon} alt="comprar"></img>Comprar
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
         </section>
         <div className="ellipse18">
           <img src={Elipse18} alt="ellipse18"></img>
@@ -172,79 +183,84 @@ const Home = () => {
           <img src={Elipse19} alt="ellipse19"></img>
         </div>
         <section id="plans">
-        <div className="section-plans">
-          <div className="title-plan">
-            <p>Explora nuestros paquetes</p>
-          </div>
-          <div className="wrapper-plans fadeUp">
-            {/* PLANES ---- */}
-            {plans.map((plan) => (
-              <div className="card-container">
-                <div className="card-wrapper">
-                  <div
-                    className={plan.offer === true ? "active-card" : "card-plan"}
-                  >
-                    <div className="card-content">
-                      <h1 className="card-title">{plan?.name_package}</h1>
-                      <div className="card-features">
-                        <div className="card-feature">
-                          <span className="card-feature-text">
-                            <Check className="card-check svg" />
-                            {plan?.description}
+          <div className="section-plans">
+            <div className="title-plan">
+              <p>Explora nuestros paquetes</p>
+            </div>
+            <div className="wrapper-plans fadeUp">
+              {/* PLANES ---- */}
+              {plans.map((plan) => (
+                <div className="card-container">
+                  <div className="card-wrapper">
+                    <div
+                      className={
+                        plan.offer === true ? "active-card" : "card-plan"
+                      }
+                    >
+                      <div className="card-content">
+                        <h1 className="card-title">{plan?.name_package}</h1>
+                        <div className="card-features">
+                          <div className="card-feature">
+                            <span className="card-feature-text">
+                              <Check className="card-check svg" />
+                              {plan?.description}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="card-price-container">
+                          <span className="card-price">
+                            {new Intl.NumberFormat("es-MX", {
+                              style: "currency",
+                              currency: "MXN",
+                              maximumFractionDigits: 2,
+                            }).format(priceCovertion * plan.cost)}
                           </span>
                         </div>
+                        <div className="card-button-container">
+                          <button
+                            className="card-button"
+                            onClick={() => handleClick(plan?.buy_url)}
+                          >
+                            <img src={ShopIcon} alt="compra" />
+                            <span className="card-button-text">Comprar</span>
+                          </button>
+                        </div>
                       </div>
-                      <div className="card-price-container">
-                        <span className="card-price">
-                          {new Intl.NumberFormat("es-MX", {
-                            style: "currency",
-                            currency: "MXN",
-                            maximumFractionDigits: 2,
-                          }).format(priceCovertion * plan.cost)}
-                        </span>
-                      </div>
-                      <div className="card-button-container">
-                        <button
-                          className="card-button"
-                          onClick={() => handleClick(plan?.buy_url)}
-                        >
-                          <img src={ShopIcon} alt="compra"/>
-                          <span className="card-button-text">Comprar</span>
-                        </button>
-                      </div>
+                      <div className="card-overlay"></div>
                     </div>
-                    <div className="card-overlay"></div>
+                    <div className="card-glow"></div>
                   </div>
-                  <div className="card-glow"></div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
         </section>
         <div>
           <img src={Elipse17} alt="ellipe17"></img>
         </div>
         <section id="testimonies">
-        <div className="section-testimonies">
-          <div className="title-testimonies">
-            <p>Testimonios</p>
-          </div>
-          <div className="wrapper-testimonies">
-            {testimonies.map((testimony) => (
-              <div className="box-testimony">
-                <div className="ellipse-yellow"></div>
-                <div className="card-testimonies">
-                  <div className="linea"></div>
-                  <div className="card-description">
-                    <TypingText text={`"${testimony.testimony}"`} speed={50} />
-                    <p>-{testimony.name_person}</p>
+          <div className="section-testimonies">
+            <div className="title-testimonies">
+              <p>Testimonios</p>
+            </div>
+            <div className="wrapper-testimonies">
+              {testimonies.map((testimony) => (
+                <div className="box-testimony">
+                  <div className="ellipse-yellow"></div>
+                  <div className="card-testimonies">
+                    <div className="linea"></div>
+                    <div className="card-description">
+                      <TypingText
+                        text={`"${testimony.testimony}"`}
+                        speed={50}
+                      />
+                      <p>-{testimony.name_person}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
         </section>
         <footer>
           <p>© 2024 Social Grow. Todos los derechos reservados.</p>

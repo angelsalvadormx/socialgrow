@@ -1,12 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 
-const TypingText = ({ text = '', speed = 50 }) => {
+const TypingText = ({ text = "", speed = 50 }) => {
   const [index, setIndex] = useState(0);
   const [startTyping, setStartTyping] = useState(false);
   const ref = useRef(null);
 
   // 🔍 Detectar si el componente está visible
   useEffect(() => {
+    let observerRefValue = null;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -21,10 +22,11 @@ const TypingText = ({ text = '', speed = 50 }) => {
 
     if (ref.current) {
       observer.observe(ref.current);
+      observerRefValue = ref.current;
     }
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (observerRefValue) observer.unobserve(observerRefValue);
     };
   }, []);
 
