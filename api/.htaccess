@@ -2,4 +2,5 @@ RewriteEngine On
 RewriteRule ^services$ services_.php [L]
 RewriteRule ^packages$ packages_.php [L]
 RewriteRule ^testimonies$ testimonies_.php [L]
+RewriteRule ^contcato$ contact_.php [L]
 
