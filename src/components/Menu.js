@@ -1,13 +1,31 @@
-import React, { useState } from "react";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import Logo from "../Img/Logo-gradient-red.svg";
+import axios from "axios";
 
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const [contacto, setContacto] = useState("");
+  const message = "¡Hola! Estoy interesado en servicio";
+  
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  useEffect(() => {
+    axios
+      .get("https://sandbox.colxsoft.com/socialgrow-com-mx/api/contacto")
+      .then((response) => {
+        setContacto(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [setContacto]);
+
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/${contacto[0]?.valor}?text=${encodedMessage}`;
 
   return (
     <div className="menu">
@@ -29,9 +47,11 @@ const Menu = () => {
             <a href="#testimonies">Testimonios</a>{" "}
           </li>
         </ul>
-              <div className="btn-contacto-movile">
-        <a >Contactanos</a>
-      </div>
+        <div>
+          <a className="btn-contacto-movile" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+            Contáctanos
+          </a>
+        </div>
       </div>
 
       {/* Botón Hamburguesa */}
@@ -46,8 +66,8 @@ const Menu = () => {
           </>
         )}
       </div>
-      <div className="btn-contacto">
-        <a>Contactanos</a>
+      <div >
+        <a className="btn-contacto"href={whatsappUrl} target="_blank" rel="noopener noreferrer">Contáctanos</a>
       </div>
       <div className="line-2"></div>
     </div>
