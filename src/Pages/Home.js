@@ -124,7 +124,7 @@ const Home = () => {
                 <p>followers</p>
               </div>
               <div className="img-socialMedia">
-                <img src={socialMedia} alt="socialMedia"></img>
+                <img src={socialMedia} alt="socialMedia" width={'100%'}></img>
               </div>
             </div>
           </div>
