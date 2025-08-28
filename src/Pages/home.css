@@ -115,6 +115,10 @@
   align-items: center;
 }
 
+.img-socialMedia img {
+  width: 100%;
+}
+
 .text-descrip {
   color: white;
   font-family: "League Spartan", sans-serif;
@@ -620,6 +624,11 @@ footer p {
   }
 }
 
+.splitText {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
 @keyframes appear {
   from {
     opacity: 0;
@@ -631,11 +640,7 @@ footer p {
   }
 }
 
-.splitText {
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 50%;
-}
+
 
 @keyframes text-subtitle {
   from {
