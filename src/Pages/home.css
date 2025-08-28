@@ -115,6 +115,10 @@
   align-items: center;
 }
 
+.img-socialMedia img {
+  width: 100%;
+}
+
 .text-descrip {
   color: white;
   font-family: "League Spartan", sans-serif;

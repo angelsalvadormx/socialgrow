@@ -75,10 +75,10 @@ const Home = () => {
       <div className="ellipse" />
       <Menu />
       <div className="ellipse4">
-        <img src={Elipse} alt="ellipe1"></img>
+        <img src={Elipse} alt="ellipe1"/>
       </div>
       <div className="ellipse5">
-        <img src={Elipse5} alt="ellipe2"></img>
+        <img src={Elipse5} alt="ellipe2"/>
       </div>
 
       <div className="body-home">
@@ -115,7 +115,7 @@ const Home = () => {
         <section id="aboutus">
           <div className="section-aboutus">
             <div className="ellipse-arrow" onClick={()=>redirectService()}>
-              <img className="img-arrow" src={arrow} alt="arrow"></img>
+              <img className="img-arrow" src={arrow} alt="arrow"/>
             </div>
             <div className="description splitText">
               <div className="text-descrip">
@@ -124,7 +124,7 @@ const Home = () => {
                 <p>followers</p>
               </div>
               <div className="img-socialMedia">
-                <img src={socialMedia} alt="socialMedia" width={'100%'}></img>
+                <img src={socialMedia} alt="socialMedia"/>
               </div>
             </div>
           </div>
@@ -146,7 +146,7 @@ const Home = () => {
                           service.name_service === "Tiktok" ? icTiktok : icInta
                         }
                         alt="service-icon"
-                      ></img>
+                      />
                     </div>
                   </div>
                   <div className="name-service">
@@ -167,7 +167,7 @@ const Home = () => {
                     </div>
                     <div>
                       <button onClick={() => handleClick(service?.buy_url)}>
-                        <img src={ShopIcon} alt="comprar"></img>Comprar
+                        <img src={ShopIcon} alt="comprar"/>Comprar
                       </button>
                     </div>
                   </div>
@@ -177,10 +177,10 @@ const Home = () => {
           </div>
         </section>
         <div className="ellipse18">
-          <img src={Elipse18} alt="ellipse18"></img>
+          <img src={Elipse18} alt="ellipse18"/>
         </div>
         <div className="ellipse19">
-          <img src={Elipse19} alt="ellipse19"></img>
+          <img src={Elipse19} alt="ellipse19"/>
         </div>
         <section id="plans">
           <div className="section-plans">
@@ -236,7 +236,7 @@ const Home = () => {
           </div>
         </section>
         <div>
-          <img src={Elipse17} alt="ellipe17"></img>
+          <img src={Elipse17} alt="ellipe17"/>
         </div>
         <section id="testimonies">
           <div className="section-testimonies">
