@@ -56,8 +56,8 @@ const Home = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, [setTestimonies]);
-
+  }, [setTestimonies]);  
+  
   getExchangeRate("USD", "MXN").then((precio) => {
     setPriceCovertion(precio);
   });

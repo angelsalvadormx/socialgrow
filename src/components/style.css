@@ -78,8 +78,8 @@
   place-self: center;
 }
 
-.btn-contacto a,
-.btn-contacto-movile a {
+a.btn-contacto ,
+a.btn-contacto-movile {
   color: black;
   font-family: "League Spartan", sans-serif;
   text-align: center;
