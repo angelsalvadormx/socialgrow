@@ -164,7 +164,9 @@ a.btn-contacto-movile {
 
   .hamburger {
     display: flex;
-    margin-right: -36px;
+    margin-right: -10px;
+    width: 100%;
+    align-items: flex-end;
   }
 
   .btn-contacto-movile {
@@ -182,6 +184,6 @@ a.btn-contacto-movile {
 
   .menu .line-2 {
     margin-left: 33px;
-    margin-top: 101px;
+    margin-top: 82px;
   }
 }
