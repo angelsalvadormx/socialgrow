@@ -131,8 +131,9 @@ a.btn-contacto-movile {
 @media (max-width: 768px) {
   .menu {
     width: 84vw;
-    position: sticky;
+    position: relative;
     justify-content: space-between;
+    left: -14px;
   }
   .nav {
     display: none;
@@ -146,6 +147,7 @@ a.btn-contacto-movile {
 
   .nav.open {
     display: block;
+    width: 100vw;
   }
 
   .nav ul {
@@ -164,7 +166,7 @@ a.btn-contacto-movile {
 
   .hamburger {
     display: flex;
-    margin-right: -10px;
+    margin-right: -32px;
     width: 100%;
     align-items: flex-end;
   }

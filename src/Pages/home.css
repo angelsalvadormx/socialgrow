@@ -431,18 +431,8 @@
   transform: scale(1.1);
 }
 
-/* Responsive Design */
-@media (max-width: 640px) {
-  .instagram-card {
-    width: 100%;
-    max-width: 343px;
-  }
-}
 
 @media (max-width: 480px) {
-  .card-container {
-    padding: 0.5rem;
-  }
 
   .card-title {
     font-size: 2rem;
@@ -640,8 +630,6 @@ footer p {
   }
 }
 
-
-
 @keyframes text-subtitle {
   from {
     opacity: 0;
@@ -739,11 +727,11 @@ footer p {
   overflow: hidden;
 }
 
-
-
 @media (max-width: 768px) {
   .title-home .ellipse-blue {
     left: 0;
+    transform: scale(1);
+    background-size: cover;
   }
 
   .group-text {
@@ -752,41 +740,45 @@ footer p {
     flex-direction: column;
   }
 
-  .description{
-        margin-top: 250px;
+  .description {
+    margin-top: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .text-descrip{
-    font-size:90px ;
+  .text-descrip {
+    font-size: 90px;
   }
 
-  .ellipse-arrow{
+  .ellipse-arrow {
     left: 100px;
     top: 60px;
     position: relative;
   }
-  
-  .splitText{
-    animation-range: 0;
-    animation-timeline:view(100% 0%);
 
+  .splitText {
+    animation-range: 0;
+    animation-timeline: view(100% 0%);
   }
 
-  .wrapper-testimonies .card-testimonies{
+  .wrapper-testimonies .card-testimonies {
     margin: 0;
+  }
+
+  .card-glow {
+    transform: scale(1);
+    background-size: cover;
   }
 }
 
-@media (min-width: 769px) and (max-width:1000px) {
-  .description{
+@media (min-width: 769px) and (max-width: 1000px) {
+  .description {
     display: flex;
     flex-direction: column;
   }
 
-  .splitText{
+  .splitText {
     animation-range: entry 0% cover 40%;
   }
 }
