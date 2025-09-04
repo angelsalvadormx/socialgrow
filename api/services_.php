@@ -7,6 +7,7 @@ $data = [
     "name_service" => "Tiktok",
     "cost" => 7.15,
     "description" => "1000 seguidores de cuentas mexicanas",
+    "offer" => false,
     "buy_url" => "https://wa.me/$tel?text=Hola,%20estoy%20interesado%20en%20servicio%20#51354AS"
   ],
   [
@@ -14,6 +15,7 @@ $data = [
     "name_service" => "Instragram",
     "cost" => 10.68,
     "description" => "1,000 followers de cuentas de instagram Latinoamérica",
+    "offer" => true,
     "buy_url" => "https://wa.me/$tel?text=Hola,%20estoy%20interesado%20en%20servicio%20#256713G3E"
   ],
   [
@@ -21,6 +23,7 @@ $data = [
     "name_service" => "Instragram",
     "cost" => 59.07,
     "description" => "1,000 followers de cuentas tipo vip solo de hombres (USA y/o Europa)",
+    "offer" => false,
     "buy_url" => "https://wa.me/$tel?text=Hola,%20estoy%20interesado%20en%20servicio%20#625713GFE"
   ],
   [
@@ -28,6 +31,7 @@ $data = [
     "name_service" => "Instragram",
     "cost" => 59.07,
     "description" => "1,000 followers de cuentas tipo vip solo de mujeres (USA y/o Europa)",
+    "offer" => false,
     "buy_url" => "https://wa.me/$tel?text=Hola,%20estoy%20interesado%20en%20servicio%20#JF5713GFE"
   ]
 ];

@@ -1,0 +1,191 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.85);
+  /* padding: 1rem 2rem; */
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  padding-top: 1rem;
+}
+.nav {
+  padding: 15px;
+}
+
+.logo-img img {
+  max-width: 100%;
+}
+
+.nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.nav ul li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.nav ul li a:hover,
+.nav ul li a:focus {
+  color: yellow;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+.btn-contacto,
+.btn-contacto-movile {
+  padding: 12px 38px;
+  background: #ffdd00; /* Color de fondo con transparencia */
+  backdrop-filter: blur(10px); /* Aplica el desenfoque de fondo */
+  border-radius: 9px; /* Bordes redondeados */
+  /* Opcional: Sombra para resaltar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde semitransparente */
+  cursor: pointer;
+}
+
+.btn-contacto-movile {
+  display: none;
+  padding: 12px 38px;
+  background: #ffdd00; /* Color de fondo con transparencia */
+  backdrop-filter: blur(10px); /* Aplica el desenfoque de fondo */
+  border-radius: 9px; /* Bordes redondeados */
+  /* Opcional: Sombra para resaltar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde semitransparente */
+  width: max-content;
+  place-self: center;
+}
+
+a.btn-contacto ,
+a.btn-contacto-movile {
+  color: black;
+  font-family: "League Spartan", sans-serif;
+  text-align: center;
+  font-weight: 500;
+}
+
+.menu .line-2 {
+  margin-top: 85px;
+  position: absolute;
+  width: 50%;
+  height: 0px;
+  border-image: linear-gradient(
+      to right,
+      #c40000 20%,
+      #250000 53%,
+      #000000 100%
+    )
+    1;
+  border-radius: 5px; /* this doesn't work */
+  border-width: 2px;
+  border-style: solid;
+  left: 0;
+}
+
+.nav ul li a:hover,
+.nav ul li a:focus {
+  color: yellow;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+.hamburger .close {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    width: 84vw;
+    position: relative;
+    justify-content: space-between;
+    left: -14px;
+  }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.95);
+    width: inherit;
+    padding: 1rem 2rem;
+  }
+
+  .nav.open {
+    display: block;
+    width: 100vw;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .nav ul li {
+    margin: 20px;
+  }
+
+  .btn-contacto {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-right: -32px;
+    width: 100%;
+    align-items: flex-end;
+  }
+
+  .btn-contacto-movile {
+    display: block;
+  }
+
+  .img-socialMedia img {
+    width: 300px;
+  }
+
+  .logo-img {
+    margin-left: 30px;
+    margin-top: 16px;
+  }
+
+  .menu .line-2 {
+    margin-left: 33px;
+    margin-top: 82px;
+  }
+}

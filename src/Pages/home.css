@@ -1,0 +1,784 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+.container {
+  background: #020202;
+  width: 100%;
+  height: 100%;
+}
+
+.body-home {
+  padding-left: 75px;
+  padding-right: 75px;
+  margin-top: 80px;
+}
+
+.title-home {
+  margin-top: 150px;
+}
+
+.title-home p {
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  font-size: 96px;
+  text-align: center;
+  z-index: 999;
+  position: relative;
+}
+
+.title-home .ellipse-blue {
+  aspect-ratio: 1;
+  background-color: #60d4eab2;
+  border-radius: 167.5px;
+  filter: blur(100px);
+  height: 335px;
+  left: 40%;
+  opacity: 0.87;
+  position: absolute;
+  top: 30%;
+  width: 335px;
+  text-align: center;
+  right: 50%;
+}
+
+.group-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-mejora {
+  width: 365px;
+}
+
+.text-mejora span {
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  font-size: 48px;
+  text-align: left;
+  z-index: 999;
+  position: relative;
+}
+
+.subtitle-home {
+  width: 365px;
+}
+
+.subtitle-home p {
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: left;
+  z-index: 999;
+  position: relative;
+}
+
+.btn-services {
+  background-color: #ffdd00;
+  width: 293px;
+  height: 51px;
+  border-radius: 9px;
+  font-size: 24px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ellipse-arrow {
+  -webkit-backdrop-filter: blur(5px) brightness(100%);
+  backdrop-filter: blur(5px) brightness(100%);
+  background: linear-gradient(
+    108deg,
+    rgba(255, 255, 255, 0.26) 0%,
+    rgba(255, 255, 255, 0.07) 100%
+  );
+  border-radius: 52.5px;
+  height: 105px;
+  left: 45%;
+  right: 45%;
+  position: absolute;
+  top: 85%;
+  width: 105px;
+}
+
+.img-arrow {
+  aspect-ratio: 1;
+  left: 25px;
+  top: 25px;
+  position: absolute;
+}
+
+.description {
+  margin-top: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img-socialMedia img {
+  width: 100%;
+}
+
+.text-descrip {
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  font-size: 128px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+}
+.text-descrip p {
+  margin: 0px;
+  animation: slideIn 2s;
+}
+
+.text-descrip p:nth-child(2) {
+  margin: 0px;
+  color: #ffdd00;
+}
+
+.section-services {
+  margin-top: 200px;
+}
+
+.section-plans,
+.section-testimonies {
+  margin-top: 50px;
+}
+
+.section-services .title-services p {
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card {
+  background: rgba(191, 191, 191, 0.1);
+  color: #fff;
+  border-radius: 12px;
+  width: 320px;
+  height: 328px;
+  text-align: center;
+  padding: 30px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  margin: 15px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(50px);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(227, 227, 227, 0.25);
+  justify-content: space-evenly;
+}
+
+.wrapper-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card .name-service {
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  font-size: 36px;
+}
+
+.card .description-service p {
+  margin: 0px;
+  color: #ffffff;
+  font-family: "League Spartan", Helvetica;
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 0;
+  line-height: normal;
+  width: 278px;
+  text-align: center;
+}
+.card .footer-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.card .footer-card button {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+  height: 33px;
+  width: 121px;
+}
+
+.card .footer-card .price {
+  color: #ffffff;
+  font-family: "League Spartan", Helvetica;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.card .icon {
+  background-color: #333;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px auto;
+}
+
+.card .icon image {
+  aspect-ratio: 1;
+  height: 37px;
+  width: 37px;
+}
+
+.section-plans .title-plan p {
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.section-plans .wrapper-plans {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-wrapper {
+  position: relative;
+}
+
+.card-plan {
+  background: linear-gradient(
+    180deg,
+    rgb(108 108 108 / 0%) -86.62%,
+    rgb(89 89 89 / 0%) 85.33%
+  );
+  margin: 15px 15px;
+  position: relative;
+  width: 343px;
+  height: 383px;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(61, 61, 61, 1);
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+}
+
+.active-card {
+  margin: 15px 15px;
+  position: relative;
+  width: 343px;
+  height: 383px;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(82, 82, 91, 0.4);
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(34, 211, 238, 0.2) 50%,
+    rgba(113, 113, 122, 0.2) 100%
+  );
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.card-content {
+  position: relative;
+  z-index: 10;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  color: white;
+  font-size: 2.25rem;
+  font-family: "League Spartan", system-ui, sans-serif;
+  font-weight: 500;
+  margin-bottom: 25px;
+  letter-spacing: 0.025em;
+  height: 55px;
+}
+
+.card-features {
+  margin-bottom: 2rem;
+  height: 40px;
+}
+
+.card-feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-feature:last-child {
+  margin-bottom: 0;
+}
+
+.card-check svg {
+  width: 0.5rem;
+  height: 0.5rem;
+  color: black;
+  margin-right: 10px;
+}
+
+.card-feature-text {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  font-family: "League Spartan", system-ui, sans-serif;
+  font-weight: 300;
+}
+
+.card-price-container {
+  margin-bottom: 2rem;
+}
+
+.card-price {
+  color: white;
+  font-size: 3rem;
+  font-family: "League Spartan", system-ui, sans-serif;
+  font-weight: 500;
+}
+
+.card-button {
+  width: 100%;
+  background-color: white;
+  border: 1px solid rgba(82, 82, 91, 0.4);
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "League Spartan", system-ui, sans-serif;
+}
+
+.card-button:hover {
+  background-color: #f9fafb;
+}
+
+.card-button-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: black;
+  transition: transform 0.2s ease;
+}
+
+.card-button:hover .card-button-icon {
+  transform: scale(1.1);
+}
+
+.card-button-text {
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(34, 211, 238, 0.1) 50%,
+    rgba(113, 113, 122, 0.1) 100%
+  );
+  backdrop-filter: blur(8px);
+}
+
+.card-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(34, 211, 238, 0.2) 0%,
+    transparent 50%,
+    rgba(147, 51, 234, 0.2) 100%
+  );
+  filter: blur(40px);
+  z-index: -10;
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 480px) {
+
+  .card-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .card-price {
+    font-size: 2.5rem;
+  }
+
+  .card-feature-text {
+    font-size: 1.125rem;
+  }
+
+  .card-button-text {
+    font-size: 1.125rem;
+  }
+}
+
+.section-testimonies .title-testimonies p {
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.box-testimony {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+}
+
+.ellipse-yellow {
+  aspect-ratio: 1;
+  border-radius: 39.5px;
+  height: 79px;
+  left: 200px;
+  position: absolute;
+  top: 57px;
+  width: 79px;
+}
+
+.wrapper-testimonies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wrapper-testimonies .card-testimonies {
+  width: 300px;
+  height: 200px;
+  border-radius: 16px;
+  backdrop-filter: blur(50px);
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  justify-content: flex-start;
+}
+
+.wrapper-testimonies .card-testimonies .linea {
+  min-width: 80px;
+  width: 80px;
+  height: 0px;
+  transform: rotate(-90deg);
+  opacity: 1;
+}
+
+.wrapper-testimonies .box-testimony:nth-child(odd) .linea {
+  border: 5px solid rgba(96, 212, 234, 1); /* Blue */
+}
+
+.wrapper-testimonies .box-testimony:nth-child(even) .linea {
+  border: 5px solid rgba(255, 228, 53, 1); /* Yellow */
+}
+
+.wrapper-testimonies .box-testimony:nth-child(odd) .ellipse-yellow {
+  background-color: rgba(96, 212, 234, 1);
+}
+
+.wrapper-testimonies .box-testimony:nth-child(even) .ellipse-yellow {
+  background-color: #ffdd00b2;
+}
+
+.wrapper-testimonies .card-description {
+  max-width: 200px;
+  color: white;
+  font-size: 20px;
+  font-family: "League Spartan";
+  font-weight: 300;
+}
+
+.wrapper-testimonies .card-description p {
+  content: "|";
+  animation: blink 1s step-end;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+footer {
+  margin-top: 150px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  color: white;
+  font-family: "League Spartan";
+  font-weight: 300;
+  font-style: Light;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  position: relative;
+  z-index: 9999;
+}
+
+@keyframes logoAnimated {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-200px); /* Sube */
+  }
+  100% {
+    transform: translateY(0); /* Vuelve */
+  }
+}
+
+.section-services .animatedServices {
+  animation: text-appear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover;
+}
+
+.section-services .wrapper-card,
+.section-plans .title-plan {
+  animation: text-appear both;
+  animation-timeline: view(10% 5%);
+  animation-range: entry 20% cover;
+}
+
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.group-text {
+  animation: fadeUp both;
+  animation-timeline: view();
+}
+
+.section-plans .wrapper-plans {
+  animation: fadeUp both;
+  animation-timeline: view(100% 0%);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.splitText {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    clip-path: inset(100% 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes text-subtitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.subtitle-home {
+  animation: text-subtitle 3s ease-in;
+}
+
+.word {
+  opacity: 0;
+  transform: translateY(20px);
+  display: inline-block;
+  animation: appeartext 0.5s ease forwards;
+}
+
+@keyframes appeartext {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: 50%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+.group-text {
+  view-timeline-name: --scroll;
+  view-timeline-axis: block;
+
+  animation: fade-out linear forwards;
+  animation-timeline: --scroll;
+  animation-range: 50% 100%;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.ellipse4 {
+  position: absolute;
+  right: 20px;
+}
+.ellipse5 {
+  position: absolute;
+  bottom: 300px;
+  left: 10px;
+}
+
+.ellipse18 {
+  position: relative;
+  bottom: 300px;
+  left: 10px;
+}
+
+.ellipse19 {
+  position: absolute;
+  right: 50px;
+}
+
+.boxEllipse {
+  position: relative;
+}
+
+.ellipseFooter {
+  aspect-ratio: 1;
+  background-color: #ffffff57;
+  border-radius: 126.5px;
+  filter: blur(71px);
+  height: 253px;
+  left: -300px;
+  position: absolute;
+  bottom: 0;
+  width: 253px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .title-home .ellipse-blue {
+    left: 0;
+    transform: scale(1);
+    background-size: cover;
+  }
+
+  .group-text {
+    opacity: 1 !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .description {
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-descrip {
+    font-size: 90px;
+  }
+
+  .ellipse-arrow {
+    left: 100px;
+    top: 60px;
+    position: relative;
+  }
+
+  .splitText {
+    animation-range: 0;
+    animation-timeline: view(100% 0%);
+  }
+
+  .wrapper-testimonies .card-testimonies {
+    margin: 0;
+  }
+
+  .card-glow {
+    transform: scale(1);
+    background-size: cover;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+  .description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .splitText {
+    animation-range: entry 0% cover 40%;
+  }
+}

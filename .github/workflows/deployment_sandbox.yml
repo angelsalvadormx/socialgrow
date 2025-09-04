@@ -1,0 +1,44 @@
+on: 
+  push:
+    branches:
+      - QA
+name: Publish QA SocialGrow
+jobs:
+  web-deploy:
+    name: Deploy To QA SocialGrow
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 🔨 Set up Node.js 22
+      uses: actions/setup-node@v3
+      with:
+        node-version: '22'
+
+    - name: 📦 Install dependencies
+      run: |
+        npm install
+        cp .env-QA .env
+        cat .env
+
+    - name: 🛠️ Build project
+      run: |
+        npm run build
+
+    - name: Prepare Folder
+      run: |
+        mkdir deploy_folder
+        mv api ./deploy_folder
+        mv build/* ./deploy_folder
+        ls ./deploy_folder/
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        protocol: ftp
+        server: ${{ secrets.FTP_QA_SERVER }} 
+        username: ${{ secrets.FTP_QA_USERNAME }}
+        password: ${{ secrets.FTP_QA_PASSWORD }}
+        server-dir: ${{ secrets.FTP_QA_SERVER_DIR }}
+        local-dir: ./deploy_folder/
