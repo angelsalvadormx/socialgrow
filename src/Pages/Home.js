@@ -15,6 +15,7 @@ import Elipse17 from "../Img/Ellipse 17.svg";
 import Elipse18 from "../Img/Ellipse 18.svg";
 import Elipse19 from "../Img/Ellipse 19.svg";
 import Menu from "../components/Menu";
+import useIsSafari from "../utils/detectorNav";
 
 const Home = () => {
   const [services, setServices] = useState([]);
@@ -56,8 +57,8 @@ const Home = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, [setTestimonies]);  
-  
+  }, [setTestimonies]);
+
   getExchangeRate("USD", "MXN").then((precio) => {
     setPriceCovertion(precio);
   });
@@ -67,18 +68,20 @@ const Home = () => {
   };
 
   const redirectService = () => {
-    window.location.href='#services'
-  }
+    window.location.href = "#services";
+  };
+
+  const isSafari = useIsSafari();
 
   return (
     <div className="container">
       <div className="ellipse" />
       <Menu />
       <div className="ellipse4">
-        <img src={Elipse} alt="ellipe1"/>
+        <img src={Elipse} alt="ellipe1" />
       </div>
       <div className="ellipse5">
-        <img src={Elipse5} alt="ellipe2"/>
+        <img src={Elipse5} alt="ellipe2" />
       </div>
 
       <div className="body-home">
@@ -86,36 +89,45 @@ const Home = () => {
           <div className="ellipse-blue"></div>
           <p>Social Grown</p>
         </div>
-        <div className="group-text">
-          <div className="text-mejora">
-            {words.map((word, index) => (
-              <span
-                key={index}
-                className="word"
-                style={{ animationDelay: `${index * 0.4}s` }}
-              >
-                {word}&nbsp;
-              </span>
-            ))}
+        {isSafari ? (
+          <div className="group-text-safari">
+            <div className="text-mejora">
+              <span>Mejora tu presencia en redes sociales</span>
+            </div>
+            <div className={"subtitle-home"}>
+              <p>
+                Ofrecemos followers, likes y comentarios para Tiktok, Instagram,
+                y más.
+              </p>
+              <a href="#services">
+                <button className="btn-services">Explorar servicios</button>
+              </a>{" "}
+            </div>
           </div>
-          <div className="subtitle-home">
-            <p>
-              Ofrecemos followers, likes y comentarios para Tiktok, Instagram, y
-              más.
-            </p>
-            <a href="#services">
-              <button
-                className="btn-services"
-              >
-                Explorar servicios
-              </button>
-            </a>
+        ) : (
+          <div className="group-text">
+            <div className="text-mejora">
+              {words.map((word, index) => (
+                <span key={index} className={`word delay-${index}`}>
+                  {word}&nbsp;
+                </span>
+              ))}
+            </div>
+            <div className="subtitle-home">
+              <p>
+                Ofrecemos followers, likes y comentarios para Tiktok, Instagram,
+                y más.
+              </p>
+              <a href="#services">
+                <button className="btn-services">Explorar servicios</button>
+              </a>
+            </div>
           </div>
-        </div>
+        )}
         <section id="aboutus">
           <div className="section-aboutus">
-            <div className="ellipse-arrow" onClick={()=>redirectService()}>
-              <img className="img-arrow" src={arrow} alt="arrow"/>
+            <div className="ellipse-arrow" onClick={() => redirectService()}>
+              <img className="img-arrow" src={arrow} alt="arrow" />
             </div>
             <div className="description splitText">
               <div className="text-descrip">
@@ -124,7 +136,7 @@ const Home = () => {
                 <p>followers</p>
               </div>
               <div className="img-socialMedia">
-                <img src={socialMedia} alt="socialMedia"/>
+                <img src={socialMedia} alt="socialMedia" />
               </div>
             </div>
           </div>
@@ -167,7 +179,8 @@ const Home = () => {
                     </div>
                     <div>
                       <button onClick={() => handleClick(service?.buy_url)}>
-                        <img src={ShopIcon} alt="comprar"/>Comprar
+                        <img src={ShopIcon} alt="comprar" />
+                        Comprar
                       </button>
                     </div>
                   </div>
@@ -177,10 +190,10 @@ const Home = () => {
           </div>
         </section>
         <div className="ellipse18">
-          <img src={Elipse18} alt="ellipse18"/>
+          <img src={Elipse18} alt="ellipse18" />
         </div>
         <div className="ellipse19">
-          <img src={Elipse19} alt="ellipse19"/>
+          <img src={Elipse19} alt="ellipse19" />
         </div>
         <section id="plans">
           <div className="section-plans">
@@ -236,7 +249,7 @@ const Home = () => {
           </div>
         </section>
         <div>
-          <img src={Elipse17} alt="ellipe17"/>
+          <img src={Elipse17} alt="ellipe17" />
         </div>
         <section id="testimonies">
           <div className="section-testimonies">
