@@ -41,10 +41,12 @@ const TypingText = ({ text = "", speed = 50 }) => {
     return () => clearTimeout(timeout);
   }, [startTyping, index, text, speed]);
 
+  const isDone = index >= text.length;
+
   return (
     <p ref={ref}>
       {text.slice(0, index)}
-      <span className="cursor">|</span>
+      {!isDone && <span className="cursor">|</span>}
     </p>
   );
 };
