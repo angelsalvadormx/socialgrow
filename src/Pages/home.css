@@ -219,10 +219,12 @@
 }
 
 @keyframes bob {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(6px);
   }
@@ -269,6 +271,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -683,12 +686,12 @@
   margin: 0;
 }
 
-.card-description > p:first-child {
+.card-description>p:first-child {
   color: var(--ink-dim);
   line-height: 1.55;
 }
 
-.card-description p + p {
+.card-description p+p {
   color: var(--accent);
   font-weight: 700;
   font-size: 13px;
@@ -760,6 +763,7 @@ footer p {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -776,6 +780,7 @@ footer p {
     opacity: 0;
     transform: translateY(10px) scale(1);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -793,6 +798,7 @@ footer p {
     opacity: 0;
     clip-path: inset(100% 0 0 0);
   }
+
   to {
     opacity: 1;
     clip-path: inset(0 0 0 0);
@@ -803,6 +809,7 @@ footer p {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -824,6 +831,7 @@ footer p {
     opacity: 0;
     transform: translateY(22px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -833,28 +841,29 @@ footer p {
 .delay-0 {
   animation-delay: 0s;
 }
+
 .delay-1 {
   animation-delay: 0.12s;
 }
+
 .delay-2 {
   animation-delay: 0.24s;
 }
+
 .delay-3 {
   animation-delay: 0.36s;
 }
+
 .delay-4 {
   animation-delay: 0.48s;
 }
+
 .delay-5 {
   animation-delay: 0.6s;
 }
 
 .group-text {
-  view-timeline-name: --hero-scroll;
-  view-timeline-axis: block;
-  animation: fade-out linear forwards;
-  animation-timeline: --hero-scroll;
-  animation-range: 50% 100%;
+  animation: text-subtitle 1.4s ease-in;
 }
 
 @keyframes fade-out {
@@ -862,6 +871,7 @@ footer p {
     opacity: 1;
     transform: scale(1);
   }
+
   to {
     opacity: 0;
     transform: scale(0.96);
