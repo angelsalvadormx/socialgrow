@@ -13,7 +13,7 @@ export const setHeadersGoogle = (g_key) => {
         window.dataLayer = window.dataLayer || [];
         function gtag(){ dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', g_key);
+        gtag('config', '${g_key}');
     `;
   document.head.appendChild(scriptTag2);
 };
