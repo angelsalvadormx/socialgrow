@@ -32,10 +32,10 @@ const Home = () => {
 
   const text = "Crece en redes sociales de verdad";
   const words = text.split(" ");
-
+  const host_site = process.env.REACT_APP_HOST_API;
   useEffect(() => {
     axios
-      .get("https://sandbox.colxsoft.com/socialgrow-com-mx/api/services")
+      .get(`${host_site}/api/services`)
       .then((response) => {
         setServices(response.data.data);
       })
@@ -47,7 +47,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("https://sandbox.colxsoft.com/socialgrow-com-mx/api/packages")
+      .get(`${host_site}/api/packages`)
       .then((response) => {
         setPlans(response.data.data);
       })
@@ -59,7 +59,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("https://sandbox.colxsoft.com/socialgrow-com-mx/api/testimonies")
+      .get(`${host_site}/api/testimonies`)
       .then((response) => {
         setTestimonies(response.data.data);
       })

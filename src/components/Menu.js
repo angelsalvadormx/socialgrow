@@ -16,7 +16,7 @@ const Menu = () => {
 
   useEffect(() => {
     axios
-      .get("https://sandbox.colxsoft.com/socialgrow-com-mx/api/contacto")
+      .get(`${process.env.REACT_APP_HOST_API}/api/contacto`)
       .then((response) => {
         setContacto(response.data.data);
       })
@@ -28,7 +28,6 @@ const Menu = () => {
 
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${contacto[0]?.valor}?text=${encodedMessage}`;
-  console.log(whatsappUrl)
   return (
     <div className="menu">
       <div className="menu-inner">
@@ -70,9 +69,7 @@ const Menu = () => {
             </>
           )}
         </div>
-        <div>
-          <a className="btn-contacto" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Contáctanos</a>
-        </div>
+        <a className="btn-contacto" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Contáctanos</a>
       </div>
     </div>
   );
