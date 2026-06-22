@@ -5,14 +5,14 @@
 }
 
 .body-home {
-  padding-left: 48px;
-  padding-right: 48px;
   padding-top: var(--header-h);
 }
 
 /* ---------- Hero ---------- */
 
 .hero {
+  padding-left: 48px;
+  padding-right: 48px;
   position: relative;
   display: grid;
   grid-template-columns: 1.3fr 0.9fr;
@@ -902,8 +902,7 @@ footer p {
 
 @media (max-width: 768px) {
   .body-home {
-    padding-left: 22px;
-    padding-right: 22px;
+
     padding-top: 63px;
   }
 
